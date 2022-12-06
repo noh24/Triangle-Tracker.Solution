@@ -1,6 +1,6 @@
-namespace Calendar
+namespace Allergies
 {
-  public class LeapYear
+  public class Score
   {
     public bool IsLeapYear(int year)
     {
