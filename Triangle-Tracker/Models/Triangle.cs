@@ -1,6 +1,6 @@
-namespace Allergies
+namespace TriangleTracker
 {
-  public class Score
+  public class Triangle
   {
     public bool IsLeapYear(int year)
     {
