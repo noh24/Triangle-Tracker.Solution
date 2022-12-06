@@ -1,34 +1,33 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Calendar;
+using TriangleTracker;
 
-namespace Calender.Tests
+namespace TriangleTracker.Tests
 {
   [TestClass]
-  public class LeapYearTests
+  public class TriangleTests
   {
     [TestMethod]
-    public void IsLeapYear_NumberDivisibleByFour_True()
+    public void TriangleConstructor_CreateInstanceOfTriangle_Triangle()
     {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(true, testLeapYear.IsLeapYear(2012));
+      Triangle triangle = new Triangle(1, 2, 3);
+      Assert.AreEqual(typeof(Triangle), triangle.GetType());
     }
     [TestMethod]
-    public void IsLeapYear_NumberNotDivisibleByFour_False()
+    public void TriangleConstructor_AddsSidesProperty_Triangle()
     {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(false, testLeapYear.IsLeapYear(1999));
+      Triangle triangle = new Triangle(1,2,3);
+      Assert.AreEqual(1, triangle.Side1);
+      Assert.AreEqual(2, triangle.Side2);
+      Assert.AreEqual(3, triangle.Side3);
     }
+
     [TestMethod]
-    public void IsLeapYear_MultiplesOfHundreds_False()
+    public void TypeTri_AddsSidesProperty_Triangle()
     {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(false, testLeapYear.IsLeapYear(1900));
-    }
-    [TestMethod]
-    public void IsLeapYear_MultiplesOfFourHundred_True()
-    {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(true, testLeapYear.IsLeapYear(2000));
+      Triangle triangle = new Triangle(1,2,3);
+      Assert.AreEqual(1, triangle.Side1);
+      Assert.AreEqual(2, triangle.Side2);
+      Assert.AreEqual(3, triangle.Side3);
     }
   }
 }
